@@ -1,0 +1,4 @@
+function err = Calc_H(H,Q0,Ysp)
+
+Y = Calc_RO_Y(Q0,H);
+err = abs(1-Y/Ysp);
