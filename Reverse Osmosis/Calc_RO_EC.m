@@ -1,5 +1,5 @@
 %% Part B, 3.)
-function Calc_RO_EC()
+function EC_vs_rcv()
 Y = zeros(1,10); % Energy Consumption
 Q_0 = zeros(1,10); % Feed Flow (gpm)
 H = zeros(1,10); % Pump Head (ft.)
@@ -16,12 +16,9 @@ end
 
 EC = Q_0.*H./(1234.*pi_0); % Energy Consumption
 
-set(gca,'DefaultAxesFontSize',20)
+
 plot(rcv,EC)
 xlabel('Pump Recovery')
 ylabel('Energy Consumption');
-set(gca,'Xtick', [0 1 2]);
-hold on
-plot ([0 1 2],180 -[0 24.9 24.9+18.2], 'o');
 
 end 
