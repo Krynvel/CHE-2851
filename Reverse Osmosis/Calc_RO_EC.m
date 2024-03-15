@@ -3,10 +3,6 @@
 function Y = Calc_RO_EC()
 
 % Given Parameters
-Y = zeros(1,10); % Flow Pressure (psi)
-Q_0 = zeros(1,10); % Feed Flow (gpm)
-H = zeros(1,10); % Pump Head (ft)
-rcv = zeros(1,10); % Recovery Percentage (%)
 pi_0 = 9; % Feed Osmotic Pressure (psi)
 
 % Iteration to Solve for Percent Recovery and Pump Head
