@@ -13,11 +13,11 @@ for i = 1:10
    H(i) = fsolve(@(H)Calc_H(H,Q_0(i),rcv(i)),180); % Pump Head (ft.)
    Y = Calc_RO_Y(Q_0(i),H(i)); % Energy Consumption
 end
-
+H
 EC = Q_0.*H./(1234.*pi_0); % Energy Consumption
 
 
-plot(rcv,EC)
+plot(rcv,EC,"LineStyle","-","Color","b","Marker","o","MarkerEdgeColor","r")
 xlabel('Pump Recovery')
 ylabel('Energy Consumption');
 
