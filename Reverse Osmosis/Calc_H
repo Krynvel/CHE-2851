@@ -1,5 +1,5 @@
 %% Part B, 2.)
-function error = Calc_H(H,Q_0,Ysp)
+function err = Calc_H(H,Q_0,Ysp)
 
 Y = Calc_RO_Y(Q_0,H);
-error = abs(1-Y/Ysp);
+err = abs(1-Y/Ysp);
