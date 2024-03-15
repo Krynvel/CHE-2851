@@ -1,5 +1,5 @@
 %% Part B, 3.)
-function EC_vs_rcv()
+function Calc_RO_EC()
 Y = zeros(1,10); % Energy Consumption
 Q_0 = zeros(1,10); % Feed Flow (gpm)
 H = zeros(1,10); % Pump Head (ft.)
