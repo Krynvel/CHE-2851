@@ -1,7 +1,7 @@
 %% Part A, 2.)
 
 %% Stage 1
-function Y = RO_model_run (Q_0,H)
+function Y = RO_model_run(Q_0,H)
 % Given Parameters
 Am = 28*7*400; % Membrane Area (ft^2)
 Lp = 0.11/24/60; % Membrane Hydraulic Permeability (gpm/psi)
@@ -30,19 +30,23 @@ k2 = k*4; % Constant for Stage 2(psi/gpm^2)
 Y = 1 - (QP_2(end,1)/Q_0);
 
 %% Graph Results 
+
+figure (1)
 set(gca,'DefaultAxesFontSize',20)
-plot([x;x2],[QP_1(:,1);QP_2(:,1)])
-xlabel('Stage')
-ylabel('Retentate Flow Rate (gpm)');
-set(gca,'Xtick', [0 1 2]);
+plot([x;x2],[QP_1(:,1);QP_2(:,1)],'Color','b')
+xlabel('Stage #')
+ylabel('Retentate Flow Rate (gpm)')
+title('Retentate Flow Rate in Stage 1 and 2')
+set(gca,'Xtick', [0 1 2])
 hold on
 plot ([0 2],[1525 1525-1234], 'o');
 
+figure (2)
 set(gca,'DefaultAxesFontsize',20)
-plot([x;x2],[QP_1(:,2);QP_2(:,2)])
+plot([x;x2],[QP_1(:,2);QP_2(:,2)], 'Color', 'r')
 xlabel('Stage #')
-ylabel('Transmembrane Pressure (psi)');
+ylabel('Transmembrane Pressure (psi)')
 title("Pressure Drop of Retentate Flow in Stage 1 and 2")
-set(gca,'Xtick', [0 1 2]);
+set(gca,'Xtick', [0 1 2])
 hold on
 plot ([0 1 2],180 -[0 24.9 24.9+18.2], 'o');
