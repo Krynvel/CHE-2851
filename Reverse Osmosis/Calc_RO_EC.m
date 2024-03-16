@@ -21,6 +21,6 @@ EC = Q_0.*H./(1234.*pi_0); % Energy Consumption
 set(gca,'DefaultAxesFontsize',20)
 plot(rcv,EC,"LineStyle","-","Color","b","Marker","o","MarkerEdgeColor","r")
 xlabel('Pump Recovery')
-ylabel('Energy Consumption');
-title ("Energy Consumption vs. Recovery ")
+ylabel('NSEC neglecting pump efficiency');
+title ("Energy Consumption vs. Recovery")
 end 
